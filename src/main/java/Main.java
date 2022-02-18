@@ -1,25 +1,24 @@
 import java.util.*;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> list = new MyArrayList<>();
-        list.add(3);
-        list.add(5);
-        list.add(4);
-        list.add(6);
-        list.add(4);
-        list.add(2);
-        list.add(4);
-        list.add(4);
-        list.add(4);
-        list.add(4);
-        for (int i = 0; i < list.size() ; i++){
-            System.out.println(list.get(i) );
+        MyList<People> list = new MyArrayList<>();
+        Random r = new Random();
+        for (int i = 0; i < 99;i++){
+            list.add(new People("Человек" + 1,r.nextInt(60)+1));
         }
-        list.sort(Integer::compareTo);
-        System.out.println("Hello World!");
-        for (int i = 0; i < list.size() ; i++){
-            System.out.println(list.get(i) );
+        for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
+        }
+        System.out.println();
+        for (int i = 0; i < list.size(); i++) {
+            System.out.println(list.get(i));
+        }
+
+
+        for (int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
         }
 
 

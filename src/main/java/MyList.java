@@ -1,4 +1,5 @@
 import java.util.Comparator;
+import java.util.Iterator;
 
 /**
  * Интерфейс лист со стандартными методами, получить, положить, удалить, размер
@@ -7,7 +8,7 @@ import java.util.Comparator;
  */
 
 
-public interface List <T>{
+public interface MyList<T> {
     T get(int index);
     boolean add(T object);
     boolean remove(T object);
@@ -17,4 +18,6 @@ public interface List <T>{
     boolean add (T object,int index);
     boolean contains(T object);
     void sort (Comparator<T> comparator);
+    boolean set(T object,int index);
+    int getIndexElement(T element);
 }

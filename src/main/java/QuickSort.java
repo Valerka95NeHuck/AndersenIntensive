@@ -3,6 +3,7 @@ import java.util.Random;
 
 public class QuickSort<T>{
     public static final Random RND = new Random();
+
     private void swap(T[] array, int i, int j) {
         T tmp = array[i];
         array[i] = array[j];
