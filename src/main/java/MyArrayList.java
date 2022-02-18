@@ -166,7 +166,7 @@ public class MyArrayList<T> implements MyList<T> {
     @Override
     public void sort(Comparator<T> comparator) {
         quickSort = new QuickSort<T>();
-        quickSort.sort((T[]) this.array, comparator);
+        quickSort.sort((T[]) this.array, comparator,size);
     }
 
     /**
@@ -176,12 +176,18 @@ public class MyArrayList<T> implements MyList<T> {
      */
     @Override
     public int getIndexElement(T element) {
+        int index = -1;
         for (int i = 0; i < size; i++) {
             if (array[i].equals(element)) {
-                return i;
+                index = i;
             }
         }
-        return  0;
+        if (contains(element)){
+            System.out.println("Искомого обьекта найден его индекс ");
+        }else {
+            System.out.println("Искомый обьект не найден");
+        }
+        return  index;
     }
 
     /**

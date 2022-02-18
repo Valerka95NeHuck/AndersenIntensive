@@ -36,7 +36,7 @@ class MyListTest {
     }
 
     @Test
-    void giveArrayListSize100ElementWhenAddElementReturnTrueSize101() {
+    void givenArrayListSize100ElementWhenAddElementReturnTrueSize101() {
     assertEquals(100,testList.size());
     assertTrue(testList.add(new People("VAlERA",43)));
     assertEquals(101,testList.size());
@@ -54,7 +54,7 @@ class MyListTest {
     }
 
     @Test
-    void whenRemovedElementByElementSizeDecreased() {
+    void givenListSize100ElementPlusOneElementWhenRemovedElementByElementThenSizeDecreased() {
         People people = new People(":@!",32);
         testList.add(people);
         assertEquals(101,testList.size());
@@ -63,9 +63,10 @@ class MyListTest {
     }
 
     @Test
-    void whenListClearedThenSize0() {
+    void givenListSize100ElementWhenListClearedThenSize0() {
         testList.clear();
         assertEquals(0,testList.size());
+        assertNull(testList.get(0));
     }
 
     @Test
@@ -76,7 +77,7 @@ class MyListTest {
     }
 
     @Test
-    void whenCheckingAnElementInACollection () {
+    void givenListSize100ElementWhenCheckingAnElementInACollection () {
         assertTrue(testList.contains(testPeople));
     }
 

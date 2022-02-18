@@ -3,23 +3,20 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        MyList<People> list = new MyArrayList<>();
-        Random r = new Random();
-        for (int i = 0; i < 99;i++){
-            list.add(new People("Человек" + 1,r.nextInt(60)+1));
-        }
-        for (int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
-        }
-        System.out.println();
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        MyList<Integer> list2 = new MyArrayList<>();
+        Random g = new Random();
+        for (int i = 0; i < 2;i++){
+            list2.add(g.nextInt(60)+1);
         }
 
 
-        for (int i = 0; i < list.size(); i++){
-            System.out.println(list.get(i));
+         list2.sort(Integer::compareTo);
+        for (int i = 0; i < list2.size(); i++){
+            System.out.println(list2.get(i));
         }
+
+
+
 
 
 

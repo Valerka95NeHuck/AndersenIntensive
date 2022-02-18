@@ -1,4 +1,6 @@
-public class People {
+import java.util.Comparator;
+
+public class People implements Comparable<People> {
     private String name;
     private Integer age;
     public People(String name, int age) {
@@ -28,5 +30,11 @@ public class People {
                 "name='" + name + '\'' +
                 ", age=" + age +
                 '}';
+    }
+
+
+    @Override
+    public int compareTo(People o) {
+        return o.compareTo(o);
     }
 }

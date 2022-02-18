@@ -28,8 +28,8 @@ public class QuickSort<T>{
             qsort(array, index + 1,  end,  cmp);
         }
     }
-    public void sort(T[] array, Comparator <T>cmp) {
-        qsort(array, 0, array.length - 1, cmp);
+    public void sort(T[] array, Comparator <T>cmp,int size) {
+        qsort(array, 0, size - 1, cmp);
     }
 
 }
