@@ -66,7 +66,7 @@ class MyListTest {
     void givenListSize100ElementWhenListClearedThenSize0() {
         testList.clear();
         assertEquals(0,testList.size());
-        assertNull(testList.get(0));
+
     }
 
     @Test
